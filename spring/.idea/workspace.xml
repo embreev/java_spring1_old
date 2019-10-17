@@ -59,7 +59,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="426" />
     <option name="y" value="1109" />
     <option name="width" value="1920" />
@@ -152,7 +152,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571316013832" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571316015316" />
     <property name="last_opened_file_path" value="$USER_HOME$/geekbrains/java_spring1" />
   </component>
   <component name="RecentsManager">
