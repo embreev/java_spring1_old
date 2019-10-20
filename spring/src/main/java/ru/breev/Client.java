@@ -14,6 +14,8 @@ public class Client
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         CameraImpl camera = context.getBean("camera", CameraImpl.class);
         camera.doPhotograph();
-
+        CameraRoll cr = new BlackAndWhiteCameraRoll();
+        camera.setCameraRoll(cr);
+        camera.doPhotograph();
     }
 }
