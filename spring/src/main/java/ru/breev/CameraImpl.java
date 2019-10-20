@@ -1,6 +1,6 @@
 package ru.breev;
 
-public class Camera {
+public class CameraImpl {
     private CameraRoll cameraRoll;
 
     public CameraRoll getCameraRoll() {
