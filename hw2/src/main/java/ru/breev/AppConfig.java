@@ -1,11 +1,16 @@
+package ru.breev;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
 @EnableWebMvc
 @Configuration
-@ComponentScan("com.geekbrains")
+@ComponentScan("ru.breev")
 public class AppConfig implements WebMvcConfigurer {
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-    }
 
     @Bean
     public InternalResourceViewResolver viewResolver() {

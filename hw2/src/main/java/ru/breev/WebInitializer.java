@@ -1,3 +1,11 @@
+package ru.breev;
+
+import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.filter.HiddenHttpMethodFilter;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import javax.servlet.Filter;
+
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
@@ -16,13 +24,10 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected Filter[] getServletFilters() {
-        // Создание фильтра кодировки, который позволит работать с русскими
-        // символами
         CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
         characterEncodingFilter.setEncoding("UTF-8");
         characterEncodingFilter.setForceEncoding(true);
-        // Создание фильтра, который добавляет поддержку HTTP-методов (например
-        // таких, как PUT), необходимых для REST API
+
         HiddenHttpMethodFilter httpMethodFilter = new HiddenHttpMethodFilter();
         return new Filter[]{characterEncodingFilter, httpMethodFilter};
     }
